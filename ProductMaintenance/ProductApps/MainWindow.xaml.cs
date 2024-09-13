@@ -49,6 +49,13 @@ namespace ProductApps
                 decimal totalWithDeliveryWrap = cProduct.TotalPayment + 25 + 5;
 
                 totalChargeAfterWrapTextBlock.Text = totalWithDeliveryWrap.ToString("C");
+
+                //Add GST to total Bill
+                decimal deliveryWrapCost = totalWithDeliveryWrap; // Delivery and wrap costs
+                decimal gstRate = 1.1m; // GST rate (10% GST)
+                decimal totalWithDeliveryWrapGST = (deliveryWrapCost * gstRate);
+
+                totalChargeAfterGSTTextBlock.Text = totalWithDeliveryWrapGST.ToString("C");
             }
             catch (FormatException)
             {

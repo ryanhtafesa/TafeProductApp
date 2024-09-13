@@ -11,13 +11,18 @@
             <TextBlock Text="Total Charge after adding the delivery charge ($25)"
                TextWrapping="Wrap" Width="104" Height="64" />
         </Label>
-        <Label HorizontalAlignment="Left" Height="86" Margin="46,240,0,0" VerticalAlignment="Top" Width="156">
+        <Label HorizontalAlignment="Left" Height="41" Margin="46,240,0,0" VerticalAlignment="Top" Width="156">
             <TextBlock Text="Total Charge after adding the wrap charge ($5):"
-               TextWrapping="Wrap" Width="146" Height="64" />
+               TextWrapping="Wrap" Width="146" Height="43" />
+        </Label>
+        <Label HorizontalAlignment="Left" Height="41" Margin="46,290,0,0" VerticalAlignment="Top" Width="156">
+            <TextBlock Text="Total Charge after GST (@10%):"
+               TextWrapping="Wrap" Width="146" Height="43" />
         </Label>
         <TextBlock Name="totalChargeTextBlock" HorizontalAlignment="Left" Height="23" Margin="190,185,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="75" />
         <TextBlock Name="totalPaymentTextBlock" HorizontalAlignment="Left" Height="23" Margin="164,167,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="75"/>
         <TextBlock Name="totalChargeAfterWrapTextBlock" HorizontalAlignment="Left" Height="23" Margin="190,250,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="75" />
+        <TextBlock Name="totalChargeAfterGSTTextBlock" HorizontalAlignment="Left" Height="23" Margin="190,290,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="75" />
         <TextBox Name="productTextBox" HorizontalAlignment="Left" Height="24" Margin="122,37,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="96"/>
         <TextBox Name="priceTextBox" HorizontalAlignment="Left" Height="24" Margin="122,78,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="77"/>
         <TextBox x:Name="quantityTextBox" HorizontalAlignment="Left" Height="24" Margin="122,119,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="77"/>
