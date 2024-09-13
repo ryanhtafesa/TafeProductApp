@@ -32,14 +32,26 @@ namespace ProductApps
             try
             {
                 cProduct = new Product(Convert.ToDecimal(priceTextBox.Text), Convert.ToInt16(quantityTextBox.Text));
+
+                // Calculate the total payment for the product
                 cProduct.calTotalPayment();
+
+                // Display the total payment in the totalPaymentTextBlock
                 totalPaymentTextBlock.Text = Convert.ToString(cProduct.TotalPayment);
+
+                // Add the delivery charge of $25 to the total payment
+                decimal totalWithDelivery = cProduct.TotalPayment + 25;
+
+                // Display the total payment including the delivery charge in totalChargeTextBlock
+                totalChargeTextBlock.Text = totalWithDelivery.ToString("C");
             }
             catch (FormatException)
             {
+                // Show error message if there's a data entry issue
                 MessageBox.Show("Enter data again", "Data Entry Error");
             }
         }
+
 
         private void clearButton_Click(object sender, RoutedEventArgs e)
         {
