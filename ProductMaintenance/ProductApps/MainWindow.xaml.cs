@@ -44,6 +44,11 @@ namespace ProductApps
 
                 // Display the total payment including the delivery charge in totalChargeTextBlock
                 totalChargeTextBlock.Text = totalWithDelivery.ToString("C");
+
+                // Add the Wrapping Charge of $5 to the Total with Delivery
+                decimal totalWithDeliveryWrap = cProduct.TotalPayment + 25 + 5;
+
+                totalChargeAfterWrapTextBlock.Text = totalWithDeliveryWrap.ToString("C");
             }
             catch (FormatException)
             {
